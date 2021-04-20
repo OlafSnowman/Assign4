@@ -1,0 +1,4 @@
+x canary
+x Write empty string to StringWriter
+x Write string to StringWriter
+x Write string twice to StringWriter
