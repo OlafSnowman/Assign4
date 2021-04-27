@@ -1,2 +1,10 @@
+program/FileWriter.java
+ program.FileWriter
 program/StringWriter.java
  program.StringWriter
+program/LowerCaseOperation.java
+ program.LowerCaseOperation
+program/UpperCaseOperation.java
+ program.UpperCaseOperation
+program/Writer.java
+ program.Writer

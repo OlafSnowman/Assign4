@@ -1,2 +1,20 @@
-program/StringWriterTest.java
- program.StringWriterTest
+program/StringWriterTests/StringWriterTest.java
+ program.StringWriterTests.StringWriterTest
+program/LowerCaseOperationTestSuite.java
+ program.LowerCaseOperationTestSuite
+program/StringWriterTests/StringWriterUpperCaseOperationTest.java
+ program.StringWriterTests.StringWriterUpperCaseOperationTest
+program/MixedOperationsTestSuite.java
+ program.MixedOperationsTestSuite
+program/FileWriterTests/FileWriterTest.java
+ program.FileWriterTests.FileWriterTest
+program/StringWriterTests/StringWriterLowerCaseOperationTest.java
+ program.StringWriterTests.StringWriterLowerCaseOperationTest
+program/UpperCaseOperationTestSuite.java
+ program.UpperCaseOperationTestSuite
+program/FileWriterTests/FileWriterLowerCaseOperationTest.java
+ program.FileWriterTests.FileWriterLowerCaseOperationTest
+program/WriterTestSuite.java
+ program.WriterTestSuite
+program/FileWriterTests/FileWriterUpperCaseOperationTest.java
+ program.FileWriterTests.FileWriterUpperCaseOperationTest

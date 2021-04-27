@@ -1,4 +1,25 @@
+Writer Test Suite (Both FileWriter and StringWriter tests)
 x canary
-x Write empty string to StringWriter
-x Write string to StringWriter
-x Write string twice to StringWriter
+x Write empty message to Writer
+x Write message to Writer
+x Write message twice to Writer
+x Write message then close then write message again to Writer
+x Close then write message to Writer
+
+Lower Case Test Suite (Check that final result is lowercase)
+x Write empty message to Writer
+x Write message to Writer
+x Write message twice to Writer
+x Write message then close then write message again to Writer
+x Close then write message to Writer
+
+Upper Case Test Suite (Check that final result is uppercase)
+x Write empty message to Writer
+x Write message to Writer
+x Write message twice to Writer
+x Write message then close then write message again to Writer
+x Close then write message to Writer
+
+Mixed Operations Test Suite
+x Uppercase then lowercase operations, check if message is lowercase
+x Lowercase then uppercase operatoins, check if message is uppercase 

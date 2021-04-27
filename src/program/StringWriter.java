@@ -1,19 +1,18 @@
 package program;
 
-public class StringWriter implements Writer {
-  private StringBuilder contents = new StringBuilder();
-  private boolean closed = false;
+import java.util.function.Function;
 
-  @Override
-  public void write(String text) {
-    if(!closed) {
-      contents.append(text);
-    }
+public class StringWriter extends Writer {
+  private StringBuilder contents = new StringBuilder();
+
+  @SafeVarargs
+  public StringWriter(Function<String, String>... modifiers) {
+    super(modifiers);
   }
 
   @Override
-  public void close() {
-    closed = true;
+  void writeContent(String text) {
+    contents.append(text);
   }
 
   @Override

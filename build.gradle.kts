@@ -13,7 +13,6 @@ dependencies {
   testCompile("org.junit.jupiter:junit-jupiter-api:5.7.0")
 	testRuntime("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 	testRuntime("org.junit.platform:junit-platform-console:1.7.1")
-  testCompile("org.mockito:mockito-core:1.+")
 }
 
 tasks {

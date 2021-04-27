@@ -1,9 +1,31 @@
 package program;
 
-public interface Writer {
-  void write(String text);
+import java.io.IOException;
+import java.util.function.Function;
+import java.util.stream.Stream;
 
-  void close();
+public abstract class Writer {
+  private boolean closed = false;
+  private Function<String, String> modifier;
 
-  String getContent();
+  @SafeVarargs
+  public Writer(Function<String, String>... modifiers) {
+    this.modifier = Stream.of(modifiers)
+        .reduce(Function::andThen)
+        .orElse(string -> string);
+  }
+
+  public void write(String text) throws IOException {
+    if(!closed) {
+      writeContent(modifier.apply(text));
+    }
+  }
+
+  abstract void writeContent(String text) throws IOException;
+
+  abstract String getContent() throws IOException;
+
+  public void close() {
+    closed = true;
+  }
 }

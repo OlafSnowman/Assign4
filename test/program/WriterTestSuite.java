@@ -3,37 +3,41 @@ package program;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StringWriterTest {
-  StringWriter writer;
+public abstract class WriterTestSuite {
+  protected abstract Writer createWriter() throws IOException;
+
+  Writer writer;
 
   @BeforeEach
-  public void init() {
-     writer = new StringWriter();
+  public void init() throws IOException {
+    writer = createWriter();
   }
 
   @Test
-  public void Canary() {
+  public void canary() {
     assertTrue(true);
   }
 
   @Test
-  public void writeNothingToStringWriter() {
+  public void writeNothingToStringWriter() throws IOException {
     assertEquals("", writer.getContent());
   }
 
 
   @Test
-  public void writeStringToWriter() {
+  public void writeStringToWriter() throws IOException {
     writer.write("Hello world!");
 
     assertEquals("Hello world!", writer.getContent());
   }
 
   @Test
-  public void writeStringTwiceToWriter() {
+  public void writeStringTwiceToWriter() throws IOException {
     writer.write("Hello world!");
     writer.write("Hello world!");
 
@@ -41,7 +45,7 @@ public class StringWriterTest {
   }
 
   @Test
-  public void writeThenCloseThenWriteToWriter() {
+  public void writeThenCloseThenWriteToWriter() throws IOException {
     writer.write("Hello world!");
     writer.close();
     writer.write("Hello world!");
@@ -50,7 +54,7 @@ public class StringWriterTest {
   }
 
   @Test
-  public void closeThenWriteToWriter() {
+  public void closeThenWriteToWriter() throws IOException {
     writer.close();
     writer.write("Hello world!");
 
