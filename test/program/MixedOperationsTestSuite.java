@@ -1,6 +1,9 @@
 package program;
 
 import org.junit.jupiter.api.Test;
+import program.operations.LowerCaseOperation;
+import program.operations.StupidRemoverOperation;
+import program.operations.UpperCaseOperation;
 
 import java.io.IOException;
 
@@ -21,5 +24,21 @@ public class MixedOperationsTestSuite {
     writer.write("HeLLo TheRE");
 
     assertEquals("HELLO THERE", writer.getContent());
+  }
+
+  @Test
+  public void stupidRemoveAndLowerCaseModification() throws IOException {
+    Writer writer = new StringWriter(LowerCaseOperation::toLowerCase, StupidRemoverOperation::removeStupid);
+    writer.write("STUPID");
+
+    assertEquals("s*****", writer.getContent());
+  }
+
+  @Test
+  public void stupidRemoveAndUpperCaseModification() throws IOException {
+    Writer writer = new StringWriter(UpperCaseOperation::toUpperCase, StupidRemoverOperation::removeStupid);
+    writer.write("stupid");
+
+    assertEquals("STUPID", writer.getContent());
   }
 }

@@ -1,7 +1,7 @@
 package program.StringWriterTests;
 
 import program.StringWriter;
-import program.UpperCaseOperation;
+import program.operations.UpperCaseOperation;
 import program.UpperCaseOperationTestSuite;
 import program.Writer;
 

@@ -1,6 +1,6 @@
 package program.StringWriterTests;
 
-import program.LowerCaseOperation;
+import program.operations.LowerCaseOperation;
 import program.LowerCaseOperationTestSuite;
 import program.StringWriter;
 import program.Writer;

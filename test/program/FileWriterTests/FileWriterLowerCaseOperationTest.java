@@ -1,7 +1,7 @@
 package program.FileWriterTests;
 
 import program.FileWriter;
-import program.LowerCaseOperation;
+import program.operations.LowerCaseOperation;
 import program.LowerCaseOperationTestSuite;
 import program.Writer;
 
