@@ -21,27 +21,27 @@ public abstract class StupidRemoverOperationTestSuite {
   public void removeStupidFromWriter() throws IOException {
     writer.write("stupid");
 
-    assertEquals(writer.getContent(), "s*****");
+    assertEquals("s*****", writer.getContent());
   }
 
   @Test
   public void removeStupidTwiceFromWriter() throws IOException {
     writer.write("stupid stupid");
 
-    assertEquals(writer.getContent(), "s***** s*****");
+    assertEquals("s***** s*****", writer.getContent());
   }
 
   @Test
   public void removeStupidFromSentence() throws IOException {
     writer.write("Ashley is stupid");
 
-    assertEquals(writer.getContent(), "Ashley is s*****");
+    assertEquals("Ashley is s*****", writer.getContent());
   }
 
   @Test
   public void removeStupidIsCaseSensitive() throws IOException {
     writer.write("STUPID StUpid stupid");
 
-    assertEquals(writer.getContent(), "STUPID StUpid s*****");
+    assertEquals("STUPID StUpid s*****", writer.getContent());
   }
 }

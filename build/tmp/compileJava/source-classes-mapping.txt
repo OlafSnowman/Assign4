@@ -1,10 +1,14 @@
+program/operations/StupidRemoverOperation.java
+ program.operations.StupidRemoverOperation
+program/operations/UpperCaseOperation.java
+ program.operations.UpperCaseOperation
 program/FileWriter.java
  program.FileWriter
 program/StringWriter.java
  program.StringWriter
-program/LowerCaseOperation.java
- program.operations.LowerCaseOperation
-program/UpperCaseOperation.java
- program.operations.UpperCaseOperation
+program/operations/DuplicateRemoverOperation.java
+ program.operations.DuplicateRemoverOperation
 program/Writer.java
  program.Writer
+program/operations/LowerCaseOperation.java
+ program.operations.LowerCaseOperation

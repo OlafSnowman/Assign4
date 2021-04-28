@@ -21,34 +21,34 @@ public abstract class DuplicateRemoverOperationTestSuite {
   public void removeDuplicate() throws IOException {
     writer.write("hello hello");
 
-    assertEquals(writer.getContent(), "hello");
+    assertEquals("hello", writer.getContent());
   }
 
   @Test
   public void removeMultipleDuplicates() throws IOException {
     writer.write("hello hello world world");
 
-    assertEquals(writer.getContent(), "hello world");
+    assertEquals("hello world", writer.getContent());
   }
 
   @Test
   public void removeDuplicatesInBetweenMessage() throws IOException {
     writer.write("hello hello there world world");
 
-    assertEquals(writer.getContent(), "hello there world");
+    assertEquals("hello there world", writer.getContent());
   }
 
   @Test
   public void removeDuplicatesInWithNonConsecutiveDuplicates() throws IOException {
     writer.write("hello there hello hello there world world life life is good is good good");
 
-    assertEquals(writer.getContent(), "hello there hello there world life is good is good");
+    assertEquals("hello there hello there world life is good is good", writer.getContent());
   }
 
   @Test
   public void removeDuplicatesIsCaseSensitive() throws IOException {
     writer.write("hello HELLo there TheRE");
 
-    assertEquals(writer.getContent(), "hello HELLo there TheRE");
+    assertEquals("hello HELLo there TheRE", writer.getContent());
   }
 }
