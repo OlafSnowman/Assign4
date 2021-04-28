@@ -18,6 +18,11 @@ public abstract class DuplicateRemoverOperationTestSuite {
   }
 
   @Test
+  public void writeNothingToWriter() throws IOException {
+    assertEquals("", writer.getContent());
+  }
+
+  @Test
   public void removeDuplicate() throws IOException {
     writer.write("hello hello");
 

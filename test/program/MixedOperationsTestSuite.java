@@ -36,7 +36,7 @@ public class MixedOperationsTestSuite {
   }
 
   @Test
-  public void stupidRemoveAndUpperCaseModification() throws IOException {
+  public void UpperCaseThenStupidRemoverModification() throws IOException {
     Writer writer = new FileWriter(UpperCaseOperation::toUpperCase, StupidRemoverOperation::removeStupid);
     writer.write("stupid");
 

@@ -20,6 +20,29 @@ x Write message twice to Writer
 x Write message then close then write message again to Writer
 x Close then write message to Writer
 
+Duplicate Remover Test Suite (Check if consecutive duplicates were removed)
+x Write empty message to Writer
+x Write hello twice
+x Write hello and world consecutively twice
+x Write hello twice, another word and then there twice
+x Write a sentence with consecutive and non consecutive duplicates
+x Write consecutive duplicates of different cases, check if case sensitive
+
+Stupid Remover Test Suite (Check if stupid was censored to s*****)
+x Write empty message to Writer
+x Write stupid to writer
+x Write stupid twice to writer
+x Write stupid in a sentence
+x Write stupid is different cases, check if case sensitive
+
 Mixed Operations Test Suite
 x Uppercase then lowercase operations, check if message is lowercase
-x Lowercase then uppercase operatoins, check if message is uppercase 
+x Lowercase then uppercase operations, check if message is uppercase
+x Uppercase then stupid remover operations, check if stupid is censored
+x Lowercase then stupid remover operations, check if stupid is uppercase
+x Lowercase then stupid remover then uppercase operations, check if stupid is uppercase and censored
+x Uppercase then stupid remover then lowercase operations, check if stupid is lowercase
+x Uppercase then duplicate remover, check if duplicates were removed
+x Lowercase then duplicate remover, check if duplicates were removed
+x Stupid remover then duplicate remover then uppercase remover, check if stupid is uppercase and censored
+x Lowercase then duplicate remover then stupid remover the uppercase, check if stupid is uppercase and censored

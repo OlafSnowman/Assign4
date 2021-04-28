@@ -18,6 +18,11 @@ public abstract class StupidRemoverOperationTestSuite {
   }
 
   @Test
+  public void writeNothingToWriter() throws IOException {
+    assertEquals("", writer.getContent());
+  }
+
+  @Test
   public void removeStupidFromWriter() throws IOException {
     writer.write("stupid");
 
